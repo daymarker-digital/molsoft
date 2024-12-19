@@ -24,6 +24,7 @@
 }
 
 .card-product__link {
+  transition: border 300ms, color 300ms, opacity 300ms;
   display: flex;
   width: 100%;
   height: auto;
