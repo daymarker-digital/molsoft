@@ -2,13 +2,14 @@
   border-radius: 4px;
   border: 1px solid rgba(0, 0, 0, 0.33);
   overflow: hidden;
+  padding: 12px 8px;
 }
 
 .card-product__container {
   display: grid;
   grid-template-columns: 100%;
   row-gap: 24px;
-  padding: 12px 8px;
+
   position: relative;
 }
 
@@ -58,6 +59,7 @@
   text-transform: uppercase;
   background: #b22223;
   color: #fff;
+  z-index: 10;
 }
 
 .card-product__title {
