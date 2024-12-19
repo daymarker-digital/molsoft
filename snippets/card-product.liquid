@@ -12,10 +12,17 @@
    *  @return void
    *
    *  @package Shopify
-   *  @subpackage aurora-medical
+   *  @subpackage molsoft
    */
 {%- endcomment -%}
 
 {%- if product and product != empty -%}
+  {%- liquid
+
+    assign product_title = product.title | default: ""
+    assign product_url = product.url | default: ""
+    assign product_vendor = product.vendor | default: ""
+
+  -%}
 
 {%- endif -%}
