@@ -24,8 +24,8 @@
 
 {%  style %}
   #shopify-section-{{ section.id }} {
-    padding_top: {{ section.settings.padding_top }}px;
-    padding_bottom: {{ section.settings.padding_bottom }}px;
+    padding_top: calc({{ section.settings.padding_top }}px * 0.66);
+    padding_bottom: calc({{ section.settings.padding_bottom }}px * 0.66);
   }
   @media (min-width: 992px) {
     #shopify-section-{{ section.id }} {
