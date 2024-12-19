@@ -1,0 +1,21 @@
+.card-product {
+  border-radius: 4px;
+  border: 1px solid currentColor;
+}
+
+.card-product__container {
+  display: grid;
+  grid-template-columns: 100%;
+  row-gap: 24px;
+}
+
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}
+@media (min-width: 1400px) {
+}
