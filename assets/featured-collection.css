@@ -17,11 +17,15 @@
 @media (min-width: 992px) {
   .featured-collection__container {
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 24px;
-    row-gap: 36px;
   }
 }
 @media (min-width: 1200px) {
+  .featured-collection__container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 @media (min-width: 1400px) {
+  .featured-collection__container {
+    grid-template-columns: 1fr 1fr 1fr 1f 1fr;
+  }
 }
