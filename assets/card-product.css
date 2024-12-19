@@ -9,6 +9,7 @@
   grid-template-columns: 100%;
   row-gap: 24px;
   padding: 12px 8px;
+  position: relative;
 }
 
 .card-product__details {
