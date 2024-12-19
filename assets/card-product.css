@@ -17,6 +17,10 @@
   background: #f7f7f7;
 }
 
+.card-product__image .card-product__link:hover {
+  opacity: 0.66;
+}
+
 .card-product__image img {
   width: 100%;
   height: auto;
