@@ -9,6 +9,13 @@
   row-gap: 24px;
 }
 
+.card-product__iamge {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  background: #f7f7f7;
+}
+
 @media (min-width: 576px) {
 }
 @media (min-width: 768px) {
