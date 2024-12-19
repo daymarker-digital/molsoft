@@ -48,6 +48,10 @@
   font-weight: inherit;
 }
 
+.card-product__price {
+  margin-top: 10px;
+}
+
 .card-product__title {
   font-weight: 600;
 }
