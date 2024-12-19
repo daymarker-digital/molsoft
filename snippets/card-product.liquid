@@ -19,6 +19,7 @@
 {%- if product and product != empty -%}
   {%- liquid
 
+    assign product_featured_image = product.featured_image | default: false
     assign product_title = product.title | default: ""
     assign product_url = product.url | default: ""
     assign product_vendor = product.vendor | default: ""
@@ -29,7 +30,7 @@
     <div class="card-product__container">
       <div class="card-product__image">
         <a class="card-product__link" href="{{ product_url }}" target="_self" title="{{ product_title }}">
-
+          {{ section.settings.image | image_url: width: 600 | image_tag: widths: '300, 600', sizes: '(min-width: 400px) 298px, 78.75vw', style: 'width: 300px' }}
         </a>
       </div>
       <div class="card-product__details">
