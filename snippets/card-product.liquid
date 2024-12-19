@@ -19,27 +19,42 @@
 {%- if product and product != empty -%}
   {%- liquid
 
+    assign product_featured_image = product.featured_image | default: false
+    assign product_price = product.price
+    assign product_promo_badge = false
     assign product_title = product.title | default: ""
     assign product_url = product.url | default: ""
     assign product_vendor = product.vendor | default: ""
+
+    for tag in product.tags
+      if tag == "Promo Badge"
+        assign product_promo_badge = tag
+        break
+      endif
+    endfor
 
   -%}
 
   <div class="card-product">
     <div class="card-product__container">
+      {% if product_promo_badge %}
+        <div class="card-product__promo-badge">{{ product_promo_badge }}</div>
+      {% endif %}
       <div class="card-product__image">
         <a class="card-product__link" href="{{ product_url }}" target="_self" title="{{ product_title }}">
-
+          {% if product_featured_image and product_featured_image != empty %}
+            {{ product_featured_image | image_url: width: 600 | image_tag: widths: '300, 600', sizes: '(min-width: 400px) 298px, 78.75vw' }}
+          {% endif %}
         </a>
       </div>
       <div class="card-product__details">
-        <div class="card-product__vendor">{{ product_vendor }}</div>
+        <div class="card-product__vendor">{{ product_vendor }} {{ kitchen_products }}</div>
         <strong class="card-product__title">
           <a class="card-product__link" href="{{ product_url }}" target="_self" title="{{ product_title }}">
             {{ product_title }}
           </a>
         </strong>
-        <div class="card-product__price"></div>
+        <div class="card-product__price">{{ product_price | money }}</div>
       </div>
     </div>
   </div>

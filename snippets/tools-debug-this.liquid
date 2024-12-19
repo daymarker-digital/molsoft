@@ -1,0 +1,26 @@
+{%- comment -%}
+  /**
+   *  Debug This.
+   *
+   *  Log's item to the console using a JavaScript call to the console.log()
+   *  method.
+   *
+   *  @author Brenden Mersey
+   *
+   *  @usage {%- render "tools-debug-this", item: product, message: "debug this product" -%}
+   *
+   *  @param mixed item to debug
+   *  @param string message for additional context of log
+   *  @return string
+   *
+   *  @package Shopify
+   *  @subpackage molsoft
+   */
+{%- endcomment -%}
+<script>
+    console.log("[ Tools | Debug This ]", {
+      message: {{ message | default: 'No Message' | json }},
+      item: {{ item | json }},
+      type: typeof {{ item | json }}
+    });
+  </script>
