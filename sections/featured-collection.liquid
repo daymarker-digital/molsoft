@@ -22,14 +22,10 @@
 
 -%}
 
-<div class="featured-collection__container">
-  <div class="container__row">
-
-    {%- for product in selected_collection_products -%}
-      {%- render "card-product", product: product -%}
-    {%- endfor -%}
-
-  </div>
+<div class="featured-collection__container" id="section--{{ section.id }}">
+  {%- for product in selected_collection_products -%}
+    {%- render "card-product", product: product -%}
+  {%- endfor -%}
 </div>
 
 {% schema %}
