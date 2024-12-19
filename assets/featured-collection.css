@@ -8,6 +8,12 @@
   row-gap: 36px;
 }
 
+@media (min-width: 576px) {
+  .featured-collection__container {
+    background-color: red;
+  }
+}
+
 @media (min-width: 768px) {
   .featured-collection__container {
     grid-template-columns: 1fr 1fr;
