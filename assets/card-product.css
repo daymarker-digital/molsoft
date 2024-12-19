@@ -60,6 +60,8 @@
   background: #b22223;
   color: #fff;
   z-index: 10;
+  padding: 3px 6px;
+  border-radius: 4px;
 }
 
 .card-product__title {
