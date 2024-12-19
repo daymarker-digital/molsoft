@@ -74,6 +74,7 @@
 
 .card-product__vendor {
   text-transform: uppercase;
+  font-size: 60%;
 }
 
 .card-product__vendor + .card-product__title {
