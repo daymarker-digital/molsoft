@@ -28,7 +28,7 @@
   <div class="card-product">
     <div class="card-product__container">
       <div class="card-product__image">
-        <a class="card-product__link" href="" target="_self" title="{{ product_title }}">
+        <a class="card-product__link" href="{{ product_url }}" target="_self" title="{{ product_title }}">
 
         </a>
       </div>
@@ -37,7 +37,9 @@
           {{ product_vendor }}
         </div>
         <strong class="card-product__title">
-          {{ product_title }}
+          <a class="card-product__link" href="{{ product_url }}" target="_self" title="{{ product_title }}">
+            {{ product_title }}
+          </a>
         </strong>
         <div class="card-product__price">
 
