@@ -21,6 +21,7 @@
 
     assign product_featured_image = product.featured_image | default: false
     assign product_price = product.price
+    assign product_promo_badge = false
     assign product_title = product.title | default: ""
     assign product_url = product.url | default: ""
     assign product_vendor = product.vendor | default: ""
