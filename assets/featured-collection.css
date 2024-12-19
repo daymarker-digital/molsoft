@@ -5,13 +5,13 @@
   padding: 0 24px;
   max-width: 1500px;
   grid-template-columns: 100%;
+  row-gap: 36px;
 }
 
 @media (min-width: 768px) {
   .featured-collection__container {
     grid-template-columns: 1fr 1fr;
     column-gap: 24px;
-    row-gap: 36px;
   }
 }
 @media (min-width: 992px) {
