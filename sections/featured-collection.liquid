@@ -12,6 +12,8 @@
    */
 {%- endcomment -%}
 
+{{ "card-product.css" | asset_url | stylesheet_tag }}
+
 {%- liquid
 
   assign selected_collection = section.settings.collection | default: false
