@@ -1,5 +1,9 @@
 .featured-collection {
 }
 
-..featured-collection__container {
+.featured-collection__container {
+  width: 100%;
+  margin: auto;
+  padding: 0 24px;
+  max-width: 1400px;
 }
