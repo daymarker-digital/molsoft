@@ -11,6 +11,12 @@
   padding: 8px;
 }
 
+.card-product__details {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+}
+
 .card-product__image {
   width: 100%;
   height: auto;
