@@ -27,7 +27,7 @@
 
     assign kitchen_products = product.tags | where: "value", "Promo Badge"
 
-    render "tools-debug-this", item: kitchen_products, "tags"
+    render "tools-debug-this", item: product.tags, "tags"
 
   -%}
 
