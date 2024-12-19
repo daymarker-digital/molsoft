@@ -37,6 +37,8 @@
   border: none;
   outline: none;
   color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
 }
 
 @media (min-width: 576px) {
