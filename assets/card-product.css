@@ -1,3 +1,8 @@
+.card-product__price,
+.card-product__vendor {
+  opacity: 0.66;
+}
+
 .card-product {
   border-radius: 4px;
   border: 1px solid rgba(0, 0, 0, 0.2);
