@@ -71,6 +71,10 @@
   font-weight: 600;
 }
 
+.card-product__vendor {
+  text-transform: uppercase;
+}
+
 .card-product__vendor + .card-product__title {
   margin-top: 5px;
 }
