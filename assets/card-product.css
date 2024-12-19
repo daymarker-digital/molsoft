@@ -53,6 +53,15 @@
   margin-top: 10px;
 }
 
+.card-product__promo-badge {
+  position: absolute;
+  text-transform: uppercase;
+  background: #b22223;
+  color: #fff;
+  top: 0;
+  left: 0;
+}
+
 .card-product__title {
   font-weight: 600;
 }
