@@ -41,6 +41,10 @@
   font-weight: inherit;
 }
 
+.card-product__title {
+  font-weight: 300;
+}
+
 @media (min-width: 576px) {
 }
 @media (min-width: 768px) {
