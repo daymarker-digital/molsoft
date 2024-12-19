@@ -25,6 +25,10 @@
     assign product_url = product.url | default: ""
     assign product_vendor = product.vendor | default: ""
 
+    assign kitchen_products = product.tags | where: "value", "Promo Badge"
+
+    render "tools-debug-this", item: kitchen_products, "tags"
+
   -%}
 
   <div class="card-product">
@@ -37,7 +41,7 @@
         </a>
       </div>
       <div class="card-product__details">
-        <div class="card-product__vendor">{{ product_vendor }}</div>
+        <div class="card-product__vendor">{{ product_vendor }} {{ kitchen_products }}</div>
         <strong class="card-product__title">
           <a class="card-product__link" href="{{ product_url }}" target="_self" title="{{ product_title }}">
             {{ product_title }}
