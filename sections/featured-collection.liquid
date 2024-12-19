@@ -15,6 +15,7 @@
 {%- liquid
 
   assign selected_collection = section.settings.collection | default: false
+  assign selected_collection_products = selected_collection.products | default: false
 
 -%}
 
