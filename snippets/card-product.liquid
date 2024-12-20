@@ -112,6 +112,10 @@
   button.addEventListener("click", () => {
     const variantID = parseInt(button.getAttribute("data-variant-id") || 0);
     const variantQty = parseInt(button.getAttribute("data-variant-qty") || 1);
+    console.log("clicked!", {
+      variantID,
+      variantQty
+    });
     addToCart(variantID, variantQty);
   });
 
