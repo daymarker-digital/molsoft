@@ -27,6 +27,12 @@
     assign product_url = product.url | default: ""
     assign product_vendor = product.vendor | default: ""
 
+    assign has_hover_image = false
+
+    if product_featured_image_hover and product_featured_image_hover
+      assign has_hover_image = true
+    endif
+
     for tag in product.tags
       if tag == "Promo Badge"
         assign product_promo_badge = tag
@@ -42,9 +48,9 @@
         <div class="card-product__promo-badge">{{ product_promo_badge }}</div>
       {% endif %}
       <div class="card-product__image">
-        <a class="card-product__link" href="{{ product_url }}" target="_self" title="{{ product_title }}">
-          {% if product_featured_image_hover and product_featured_image != empty %}
-            {{ product_featured_image | image_url: width: 600 | image_tag: widths: '300, 600', sizes: '(min-width: 400px) 298px, 78.75vw', style: "hover" }}
+        <a class="card-product__link {% if has_hover_image %}has-hover-image{% endif %}" href="{{ product_url }}" target="_self" title="{{ product_title }}">
+          {% if has_hover_image %}
+            {{ product_featured_image | image_url: width: 600 | image_tag: widths: '300, 600', sizes: '(min-width: 400px) 298px, 78.75vw', style: "hover-image" }}
           {% endif %}
           {% if product_featured_image and product_featured_image != empty %}
             {{ product_featured_image | image_url: width: 600 | image_tag: widths: '300, 600', sizes: '(min-width: 400px) 298px, 78.75vw' }}
