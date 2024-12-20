@@ -33,7 +33,7 @@
 }
 
 .card-product__image .card-product__link.has-hover-image:hover .feature-image {
-  border: 1px solid red;
+  opacity: 0;
 }
 
 .card-product__image img {
