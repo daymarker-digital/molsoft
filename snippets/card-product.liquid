@@ -69,7 +69,13 @@
         </strong>
         <div class="card-product__price">{{ product_price | money }}</div>
       </div>
-      <button class="card-product__button-atc" id="add-to-cart--{{ product_variant_id }}" type="button" data-variant-id="{{ product_variant_id }}">Add to Cart</button>
+      <button
+        class="card-product__button-atc"
+        id="add-to-cart--{{ product_variant_id }}"
+        type="button"
+        data-variant-id="{{ product_variant_id }}"
+        data-variant-qty="1"
+      >Add to Cart</button>
     </div>
   </div>
 
@@ -105,7 +111,7 @@
 
   button.addEventListener("click", () => {
     const variantID = parseInt(button.getAttribute("data-variant-id") || 0);
-
+    addToCart
   });
 
 })();
