@@ -68,6 +68,7 @@
         </strong>
         <div class="card-product__price">{{ product_price | money }}</div>
       </div>
+      <button type="button" data-variant-id="">Add to Cart</button>
     </div>
   </div>
 
@@ -78,21 +79,28 @@
 
   function addToCart(variantID = 0, quantity = 1) {
 
+    fetch(window.Shopify.routes.root + 'cart/add.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        'items': [{
+          'id': variantID,
+          'quantity': quantity
+        }]
+      })
+    })
+    .then(response => {
+      return response.json();
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+
   }
 
-  fetch(window.Shopify.routes.root + 'cart/add.js', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(formData)
-  })
-  .then(response => {
-    return response.json();
-  })
-  .catch((error) => {
-    console.error('Error:', error);
-  });
+
 
 })();
 </script>
