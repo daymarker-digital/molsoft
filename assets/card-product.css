@@ -32,10 +32,8 @@
   aspect-ratio: 1/1;
 }
 
-.card-product__image .card-product__link.has-hover-image:hover {
-  .feature-image {
-    opacity: 0;
-  }
+.card-product__image .card-product__link.has-hover-image:hover .feature-image {
+  opacity: 0;
 }
 
 .card-product__image img {
@@ -46,6 +44,7 @@
 
 .card-product__image .feature-image {
   transition: opacity 300ms;
+  opacity: 1;
 }
 
 .card-product__link {
