@@ -68,14 +68,17 @@
           </a>
         </strong>
         <div class="card-product__price">{{ product_price | money }}</div>
+
+        <button
+          class="card-product__button-atc"
+          id="add-to-cart--{{ product_variant_id }}"
+          type="button"
+          data-variant-id="{{ product_variant_id }}"
+          data-variant-qty="1"
+        >Add to Cart</button>
+
       </div>
-      <button
-        class="card-product__button-atc"
-        id="add-to-cart--{{ product_variant_id }}"
-        type="button"
-        data-variant-id="{{ product_variant_id }}"
-        data-variant-qty="1"
-      >Add to Cart</button>
+
     </div>
   </div>
 
